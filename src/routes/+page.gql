@@ -1,0 +1,20 @@
+query GetRootItems @cache(policy: NetworkOnly) {
+	rootItems {
+		nodes {
+			id
+			displayName
+			signingProgress {
+				signerInfos {
+					id
+					signed
+					signingTimestamp
+					person {
+						id
+						firstName
+						lastName
+					}
+				}
+			}
+		}
+	}
+}
